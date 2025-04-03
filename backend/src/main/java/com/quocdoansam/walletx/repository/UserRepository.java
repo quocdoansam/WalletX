@@ -10,5 +10,6 @@ import com.quocdoansam.walletx.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, String> {
     boolean existsByUsername(String username);
+    boolean existsByWalletAddress(String walletAddress);
     Optional<User> findByUsername(String username);
 }
