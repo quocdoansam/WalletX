@@ -1,6 +1,8 @@
 package com.quocdoansam.walletx.exception;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -34,4 +36,23 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.badRequest().body(apiResponse);
     }
+
+    @ExceptionHandler(value = MethodArgumentNotValidException.class)
+    ResponseEntity<ApiResponse> handlingValidation(MethodArgumentNotValidException exception) {
+
+        ErrorCode errorCode = ErrorCode.UNCATEGORIZED_EXCEPTION;
+        FieldError fieldError = exception.getFieldError();
+
+        if (fieldError != null) {
+            String enumKey = fieldError.getDefaultMessage();
+            errorCode = ErrorCode.valueOf(enumKey);
+        }
+
+        ApiResponse apiResponse = new ApiResponse<>();
+        apiResponse.setCode(errorCode.getCode());
+        apiResponse.setMessage(errorCode.getMessage());
+
+        return ResponseEntity.badRequest().body(apiResponse);
+    }
+
 }
