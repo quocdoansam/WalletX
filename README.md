@@ -10,8 +10,10 @@
 - **Libraries:**
   - `Lombok`
   - `Mapstruct`
+  - `Spring Security`
+  - `Oauth2-resource-processor`
   - `Spring Data JPA`
   - `MySQL Driver`
   - `Spring Web`
-## React - TypeScript
+## Reactjs - TypeScript
 - **Updating ...**
