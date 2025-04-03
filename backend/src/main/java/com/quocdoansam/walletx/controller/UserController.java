@@ -9,6 +9,8 @@ import com.quocdoansam.walletx.dto.request.UserCreationRequest;
 import com.quocdoansam.walletx.dto.response.ApiResponse;
 import com.quocdoansam.walletx.dto.response.UserResponse;
 import com.quocdoansam.walletx.service.UserService;
+import org.springframework.web.bind.annotation.PostMapping;
+
 
 @RestController
 @RequestMapping("/users")
@@ -16,6 +18,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @PostMapping("/create")
     @SuppressWarnings("unchecked")
     ApiResponse<UserResponse> create(@RequestBody UserCreationRequest request) {
         ApiResponse apiResponse = new ApiResponse<>();
