@@ -14,7 +14,10 @@ public enum ErrorCode {
     USER_EXISTED(1002, "User existed."),
     USERNAME_INVALID(1003, "Username must be at least 3 characters."),
     PASSWORD_INVALID(1004, "Password must be at least 8 characters."),
-    UNAUTHENTICATED(1005, "Unauthenticated.")
+    UNAUTHENTICATED(1005, "Unauthenticated."),
+    WALLET_ADDRESS_EXISTED(1006, "Wallet address existed."),
+    WALLET_ADDRESS_NOT_EXISTED(1007, "Wallet address not existed."),
+    FORBIDDEN(1008, "Access is forbidden.")
     ;
 
     int code;
