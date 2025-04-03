@@ -3,6 +3,7 @@ package com.quocdoansam.walletx.entity;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Set;
+import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -42,8 +43,9 @@ public class User {
     String fullName;
     LocalDate dob;
 
+    @Builder.Default
     @Column(unique = true)
-    String walletAddress;
+    String walletAddress = UUID.randomUUID().toString();
 
     @Builder.Default
     @Column(columnDefinition = "DECIMAL(19, 4)")

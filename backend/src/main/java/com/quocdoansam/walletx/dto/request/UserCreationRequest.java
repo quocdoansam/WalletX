@@ -18,6 +18,5 @@ public class UserCreationRequest {
     String username;
     String password;
     String fullName;
-    String walletAddress;
     Set<String> roles;
 }
