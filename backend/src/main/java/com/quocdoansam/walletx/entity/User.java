@@ -45,8 +45,9 @@ public class User {
     @Column(unique = true)
     String walletAddress;
 
+    @Builder.Default
     @Column(columnDefinition = "DECIMAL(19, 4)")
-    BigDecimal balance;
+    BigDecimal balance = BigDecimal.ZERO;
 
     Set<String> roles;
 
