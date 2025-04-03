@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -50,7 +49,6 @@ public class UserService {
         return userMapper.toUserResponse(userRepository.save(user));
     }
 
-    @PostAuthorize("returnObject.username == authentication.name")
     public UserResponse read(String username) {
         return userMapper
                 .toUserResponse(userRepository
