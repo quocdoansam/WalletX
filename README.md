@@ -6,7 +6,7 @@
 - **Understand what *Blockchain* are and apply it to the project.**
 ## Java - Spring Framework
 - **Version:** `3.4.4`
-- **Project builder:** `Apache Maven 3.9.9`
+- **Project management:** `Apache Maven 3.9.9`
 - **Libraries:**
   - `Lombok`
   - `Mapstruct`
