@@ -1,5 +1,5 @@
 # WALLET-X | WALLET SIMULATION
-> This is a project using **Java - Spring Boot Framework** for **Backend** and **React - TypeScript** for **Frontend**
+> This is a project using **Java - Spring Boot Framework** for **Backend** and **React - TypeScript** for **Frontend**.
 ## The purpose of the project
 - **Learn *Spring Boot Framework*.**
 - **Learn *React Framework* and *TypeScript*.**
@@ -8,12 +8,15 @@
 - **Version:** `3.4.4`
 - **Project management:** `Apache Maven 3.9.9`
 - **Libraries:**
-  - `Lombok`
-  - `Mapstruct`
-  - `Spring Security`
-  - `Oauth2-resource-processor`
-  - `Spring Data JPA`
-  - `MySQL Driver`
-  - `Spring Web`
+  - `spring-boot-starter-web`
+  - `mysql-connector-j`
+  - `spring-boot-starter-data-jpa`
+  - `lombok`
+  - `mapstruct`
+  - `mapstruct-processor`
+  - `lombok-mapstruct-binding`
+  - `spring-security-crypto`
+  - `spring-boot-starter-oauth2-resource-server`
+  - `spring-boot-starter-validation`
 ## Reactjs - TypeScript
 - **Updating ...**
