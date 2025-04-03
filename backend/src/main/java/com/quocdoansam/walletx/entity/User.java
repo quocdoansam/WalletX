@@ -18,15 +18,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@FieldDefaults(level = AccessLevel.PRIVATE)
-@Entity
+@Data // Auto create methods getter, setter, toString, equals, hashCode
+@NoArgsConstructor // Create a constructor no arguments
+@AllArgsConstructor // Create a constructor arguments for all fields
+@Builder // Allowed Builder pattern to init object
+@FieldDefaults(level = AccessLevel.PRIVATE) // Set default all fields is private if not defined
+@Entity // define this class is an entity, mapping JPA 
 public class User {
+    
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.UUID) // Auto generate Id
     String id;
 
     @Column(unique = true, nullable = false)
@@ -52,3 +53,4 @@ public class User {
     @CreationTimestamp
     LocalDate createdAt;
 }
+
