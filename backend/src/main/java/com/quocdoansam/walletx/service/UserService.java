@@ -31,7 +31,7 @@ public class UserService {
     UserMapper userMapper;
 
     public UserResponse create(UserCreationRequest request) {
-        if (userRepository.isUserExistedByUsername(request.getUsername())) {
+        if (userRepository.existsByUsername(request.getUsername())) {
             throw new AppException(ErrorCode.USER_EXISTED);
         }
 
