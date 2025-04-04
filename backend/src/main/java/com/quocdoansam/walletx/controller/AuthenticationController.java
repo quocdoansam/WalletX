@@ -17,9 +17,11 @@ import lombok.experimental.FieldDefaults;
 
 import java.text.ParseException;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+@CrossOrigin(origins = "http://localhost:5173") 
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor

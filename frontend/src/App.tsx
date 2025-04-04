@@ -1,22 +1,20 @@
-import { Route, Routes } from "react-router-dom"
-import Header from "./components/Header"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
-import Wallet from "./pages/Wallet"
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import MainLayout from './layouts/MainLayout'
+import About from './pages/About'
 
-const App = () => {
+function App() {
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/wallet" element={<Wallet />} />
-        <Route path="/account" element={<Home />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+      </Route>
+
+      <Route path='/login' element={<Login />} />
+    </Routes>
   )
 }
 

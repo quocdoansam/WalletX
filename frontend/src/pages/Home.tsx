@@ -1,7 +1,12 @@
-export default function Home() {
-    return (
-        <>
-            <div className="bg-red-500">Home</div>
-        </>
-    )
+import CreditCard from "../components/CreditCard"
+
+const Home = () => {
+  return (
+    <main className="container">
+        <h1>Welcome to Wallet-X</h1>
+        <CreditCard />
+    </main>
+  )
 }
+
+export default Home
