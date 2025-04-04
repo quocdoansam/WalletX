@@ -24,19 +24,19 @@ const Navbar = () => {
                 </li>
             </Link>
             <Link to={"/wallet"}>
-                <li className={`nav nav-wallet ${location.pathname === "/wallet" ? "active" : ""}`}>
+                <li className={`nav nav-wallet ${location.pathname === "/wallet" ? "nav-active" : ""}`}>
                     <img src={walletSVG} alt="Wallet" />
                     <span>Your Wallet</span>
                 </li>
             </Link>
             <Link to={"/earn-money"}>
-                <li className={`nav nav-earn-money ${location.pathname === "/earn-money" ? "active" : ""}`}>
+                <li className={`nav nav-earn-money ${location.pathname === "/earn-money" ? "nav-active" : ""}`}>
                     <img src={moneySVG} alt="Earn Money" />
                     <span>Earn Money</span>
                 </li>
             </Link>
             <Link to={"/transaction"}>
-                <li className={`nav nav-transaction ${location.pathname === "/transaction" ? "active" : ""}`}>
+                <li className={`nav nav-transaction ${location.pathname === "/transaction" ? "nav-active" : ""}`}>
                     <img src={transactionSVG} alt="Transaction" />
                     <span>Transaction</span>
                 </li>
