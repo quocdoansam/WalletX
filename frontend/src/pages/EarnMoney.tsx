@@ -1,6 +1,8 @@
 const EarnMoney = () => {
   return (
-    <div>EarnMoney</div>
+    <main className="container">
+        <h1>Earn money page</h1>
+    </main>
   )
 }
 

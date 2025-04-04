@@ -7,16 +7,42 @@ import About from './pages/About'
 import Wallet from './pages/Wallet'
 import EarnMoney from './pages/EarnMoney'
 import Transaction from './pages/Transaction'
+import ProtectedRoute from './security/ProtectedRoute'
 
 function App() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/wallet' element={<Wallet />} />
-        <Route path='/earn-money' element={<EarnMoney />} />
-        <Route path='/transaction' element={<Transaction />} />
+        <Route path='/'
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          } />
+        <Route path='/about'
+          element={
+            <ProtectedRoute>
+              <About />
+            </ProtectedRoute>}
+        />
+        <Route path='/wallet'
+          element={
+            <ProtectedRoute>
+              <Wallet />
+            </ProtectedRoute>}
+        />
+        <Route path='/earn-money'
+          element={
+            <ProtectedRoute>
+              <EarnMoney />
+            </ProtectedRoute>}
+        />
+        <Route path='/transaction'
+          element={
+            <ProtectedRoute>
+              <Transaction />
+            </ProtectedRoute>}
+        />
       </Route>
 
       <Route path='/login' element={<Login />} />

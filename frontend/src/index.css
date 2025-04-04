@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-  font-family: "Inter", "sans-serif";
+  font-family: var(--font-base);
 
-  --backgroundColor: #ffffff;
+  --backgroundColor: #0d1117;
   --onBackgroundColor: #2e2e2e;
   --secondaryColor: rgba(177, 177, 177, 0.3);
   --onSecondaryColor: rgba(0, 0, 0, 1);
+  --font-base: 'Roboto';
 }
 
 * {
@@ -22,12 +23,6 @@ a {
 
 ul {
   list-style-type: none;
-}
-
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
 }
 
 input {

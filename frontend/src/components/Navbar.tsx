@@ -1,9 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import overviewSVG from "../assets/icons/overview.svg";
-import aboutSVG from "../assets/icons/about.svg";
-import walletSVG from "../assets/icons/wallet.svg";
-import moneySVG from "../assets/icons/money.svg";
-import transactionSVG from "../assets/icons/transaction.svg"
+import { Chip } from "@mui/material";
+
+import { Info, LocalLibraryRounded, PaidRounded, ReceiptLongRounded, Wallet } from "@mui/icons-material";
 
 const Navbar = () => {
 
@@ -11,36 +9,51 @@ const Navbar = () => {
 
     return (
         <ul className="navbar">
-            <Link to={"/"}>
-                <li className={`nav nav-overview ${location.pathname === "/" ? "nav-active" : ""}`}>
-                    <img src={overviewSVG} alt="Overview" />
-                    <span>Overview</span>
-                </li>
-            </Link>
-            <Link to={"/about"}>
-                <li className={`nav nav-about ${location.pathname === "/about" ? "nav-active" : ""}`}>
-                    <img src={aboutSVG} alt="About" />
-                    <span>About</span>
-                </li>
-            </Link>
-            <Link to={"/wallet"}>
-                <li className={`nav nav-wallet ${location.pathname === "/wallet" ? "nav-active" : ""}`}>
-                    <img src={walletSVG} alt="Wallet" />
-                    <span>Your Wallet</span>
-                </li>
-            </Link>
-            <Link to={"/earn-money"}>
-                <li className={`nav nav-earn-money ${location.pathname === "/earn-money" ? "nav-active" : ""}`}>
-                    <img src={moneySVG} alt="Earn Money" />
-                    <span>Earn Money</span>
-                </li>
-            </Link>
-            <Link to={"/transaction"}>
-                <li className={`nav nav-transaction ${location.pathname === "/transaction" ? "nav-active" : ""}`}>
-                    <img src={transactionSVG} alt="Transaction" />
-                    <span>Transaction</span>
-                </li>
-            </Link>
+            <Chip
+                sx={{ fontWeight: 800 }}
+                variant={location.pathname === '/' ? "filled" : "outlined"}
+                label="Overview"
+                component={Link}
+                to={'/'}
+                avatar={<LocalLibraryRounded />}
+                clickable
+            />
+            <Chip
+                sx={{ fontWeight: 800 }}
+                variant={location.pathname === '/wallet' ? "filled" : "outlined"}
+                label="Your Wallet"
+                component={Link}
+                to={'/wallet'}
+                avatar={<Wallet />}
+                clickable
+            />
+            <Chip
+                sx={{ fontWeight: 800 }}
+                variant={location.pathname === '/earn-money' ? "filled" : "outlined"}
+                label="Earn Money"
+                component={Link}
+                to={'/earn-money'}
+                avatar={<PaidRounded />}
+                clickable
+            />
+            <Chip
+                sx={{ fontWeight: 800 }}
+                variant={location.pathname === '/transaction' ? "filled" : "outlined"}
+                label="Transaction"
+                component={Link}
+                to={'/transaction'}
+                avatar={<ReceiptLongRounded />}
+                clickable
+            />
+            <Chip
+                sx={{ fontWeight: 800 }}
+                variant={location.pathname === '/about' ? "filled" : "outlined"}
+                label="About US"
+                component={Link}
+                to={'/about'}
+                avatar={<Info />}
+                clickable
+            />
         </ul>
     )
 }
